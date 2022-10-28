@@ -1,0 +1,99 @@
+Curso: https://www.youtube.com/watch?v=WwG5wNYoXnI&list=PL0_f8nzxZ-FksYjJ8Oj4WwD13OVE2tNiH
+
+FRONTEND: o vuejs 2 foi instalado o modo automático (babel, eslint)
+    vue create fontend
+
+FRONTEND: rodar o servidor: npm run serve
+
+FRONTEND: aula 3 - Vue Router
+    https://router.vuejs.org/
+    
+    npm install vue router@3
+    é recomendável rodar  npm run serve de novo
+
+    no main.js:
+        import Vue from 'vue'
+        import App from './App.vue'
+        import VueRouter from 'vue-router'
+        import LoginComponent from './Pages/Login/LoginComponent'
+
+        Vue.config.productionTip = false
+
+        Vue.use(VueRouter)
+
+        const routes = [
+        { path: '/', component: LoginComponent },
+        ]
+
+        const router = new VueRouter({
+        routes // short for `routes: routes`
+        })
+
+        new Vue({
+        router,
+        render: h => h(App),
+        }).$mount('#app')
+
+    App.vue:
+        <template>
+        <div id="app">
+            <img alt="Vue logo" src="./assets/logo.png">
+            <router-view></router-view>
+        </div>
+        </template>
+
+        <script>
+
+        export default {
+        name: 'App',
+        components: {
+            
+        }
+        }
+        </script>
+
+        <style>
+        #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+        }
+        </style>
+
+instalando o Sass:
+    npm install -D sass-loader node-sass
+
+    pra declarar na maneira do sass:
+
+    .minha_div {
+        h1 {
+            todos os h1 dentro da .minha_div serão alterados
+        }
+    }
+
+    jeito tradicional:
+    .minha_div h1 {
+        // blablabla
+    }
+
+Para usar variavel global no sass:
+    dentro de public/src/assets, crie 2 arquivos:
+        _colors.scss
+        _main.scss
+
+    no _colors, declare variaveis tipo:
+        $purple: $purple: #b2acfa
+
+    no _main, importe o colors:
+        @import: './_colors'
+
+    nos styles de cada componente, importe o main:
+        @import: '@/assets/scss/_main';
+
+    no styles.scss desejado, coloque algo como:
+        .minha_div: {
+            background-color: $purple;
+        }

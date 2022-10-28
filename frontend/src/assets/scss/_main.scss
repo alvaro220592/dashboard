@@ -1,0 +1,31 @@
+@import './colors';
+
+main {
+    background-color: $yellow;
+    height: 100vh;
+    
+    .nav {
+        background-color: $blue;
+        display: flex;
+        height: 120px;
+
+        ul {
+            margin-top: 50px;
+            padding-left: 50px;
+            list-style: none;
+
+            .nav-link {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .input-text{
+        border-radius: 4px;
+        height: 25px;
+        border: 1px $grey solid;
+        margin: 3px;
+        padding: 3px;
+    }
+}
