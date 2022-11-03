@@ -17,6 +17,7 @@
         h1 {
             font-size: 30px;
             color: $white;
+            text-shadow: black 2px 2px 5px;
         }
     }
 
@@ -24,5 +25,6 @@
         height: 35px;
         background-color: $darkblue;
         color: $white;
+        box-shadow: black .5px .5px 2px;
     }
 }

@@ -1,0 +1,47 @@
+@import '@/assets/scss/_main';
+
+aside {
+    width: 200px;
+    height: 100vh;
+    background-color: $blue;
+    transition: .5s;
+    color: white;
+    text-shadow: black 1px 1px 3px;
+    
+    ul {
+        margin-top: 50px;
+        padding: 5px;
+        list-style: none;
+
+        li {
+            display: flex;
+            padding: 0px;
+            white-space: nowrap;
+            display: flex;
+
+            a {
+                padding: 0px;
+                margin-left: 5px;
+                
+                i {
+                    font-size: 30px;
+                }
+
+                span {
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+}
+
+.aside_collapse {
+    width: 55px;
+    height: 100vh;
+    background-color: $blue;
+    transition: .5s;
+
+    span {
+        display: none;
+    }
+}
