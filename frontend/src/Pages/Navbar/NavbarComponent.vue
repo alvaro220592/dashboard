@@ -16,10 +16,10 @@
             sidebar_toggle() {
                 let aside = document.querySelector('aside')
 
-                if(!aside.classList.contains('aside_collapse')){
-                    aside.classList.add('aside_collapse')
+                if(!aside.classList.contains('sidebar_collapse')){
+                    aside.classList.add('sidebar_collapse')
                 }else{
-                    aside.classList.remove('aside_collapse')
+                    aside.classList.remove('sidebar_collapse')
                 }
             }
         }

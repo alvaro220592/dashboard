@@ -4,12 +4,31 @@ aside {
     width: 200px;
     height: 100vh;
     background-color: $blue;
-    transition: .5s;
+    transition: .3s;
     color: white;
     text-shadow: black 1px 1px 3px;
-    
-    ul {
-        margin-top: 50px;
+
+    .sidebar_avatar {
+        list-style: none;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        text-align: center;
+        display: block;
+        background-color: $darkblue;
+        height: 50px;
+
+        li {
+            margin: 0px;
+        }
+
+        .avatar {
+            font-size: 35px;
+        }
+    }
+
+    .sidebar_links {
         padding: 5px;
         list-style: none;
 
@@ -18,13 +37,16 @@ aside {
             padding: 0px;
             white-space: nowrap;
             display: flex;
+            border-radius: 4px;
+            padding: 3px;
+            cursor: pointer;
 
             a {
                 padding: 0px;
                 margin-left: 5px;
                 
                 i {
-                    font-size: 30px;
+                    font-size: 25px;
                 }
 
                 span {
@@ -32,14 +54,19 @@ aside {
                 }
             }
         }
+
+        li:hover{
+            background-color: $darkblue;
+            transition: .3s;
+        }
     }
 }
 
-.aside_collapse {
+.sidebar_collapse {
     width: 55px;
     height: 100vh;
     background-color: $blue;
-    transition: .5s;
+    transition: .3s;
 
     span {
         display: none;
