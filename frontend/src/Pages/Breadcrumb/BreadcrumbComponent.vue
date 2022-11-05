@@ -1,12 +1,16 @@
 <template>
     <div>
-        <p class="breadcrumb">Conteúdo > teste</p>
+        <p class="breadcrumb">{{ link }}</p>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'BreadcrumbComponent'
+    name: 'BreadcrumbComponent',
+
+    props: {
+        link: String
+    }
 }
 </script>
 
