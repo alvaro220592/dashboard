@@ -97,3 +97,5 @@ Para usar variavel global no sass:
         .minha_div: {
             background-color: $purple;
         }
+
+Dica: componentes que podem ser usados em qualquer página, tipo breadcrumbs, cards, podem ser criados na pasta 'components'

@@ -17,7 +17,7 @@
 <script>
 
 import DashboardComponent from '../Dashboard/DashboardComponent.vue'
-import BreadcrumbComponent from '../Breadcrumb/BreadcrumbComponent.vue'
+import BreadcrumbComponent from '../../components/Breadcrumb/BreadcrumbComponent.vue'
 
 export default {
     name: 'HomeComponent',

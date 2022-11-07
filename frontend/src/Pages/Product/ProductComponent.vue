@@ -1,27 +1,37 @@
 <template>
     <DashboardComponent>
-        <div slot="pages">
+        <div slot="pages" class="">
             <BreadcrumbComponent link="Produtos / Teste" />
-            <section class="card">
-                <h3 class="text-danger">Teste</h3>
-                <p class="text-danger">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet vero nulla suscipit esse quasi, quas corrupti sint tempore dolor beatae ut. Unde, ea? Praesentium maiores voluptates suscipit adipisci? Perferendis, architecto.
-                </p>
-            </section>
+            
+            <div class="row m-1">
+                <CardComponent titulo="Título 1" conteudo="Conteúdo 1">
+                    <i slot="icon" class='bi bi-fire'></i>
+                </CardComponent>
+
+                <CardComponent titulo="Título 2" conteudo="Conteúdo 2">
+                    <i slot="icon" class='bi bi-flag-fill'></i>
+                </CardComponent>  
+
+                <CardComponent titulo="Titulo 3" conteudo="Conteúdo 3">
+                    <i slot="icon" class='bi bi-gear-fill'></i>
+                </CardComponent>  
+            </div>
         </div>
     </DashboardComponent>
 </template>
 
 <script>
     import DashboardComponent from '../Dashboard/DashboardComponent.vue'
-    import BreadcrumbComponent from '../Breadcrumb/BreadcrumbComponent.vue'
+    import BreadcrumbComponent from '../../components/Breadcrumb/BreadcrumbComponent.vue'
+    import CardComponent from '../../components/Card/CardComponent.vue'
     
     export default {
         name: 'ProductComponent',
 
         components: {
             DashboardComponent,
-            BreadcrumbComponent
+            BreadcrumbComponent,
+            CardComponent
         }
     }
 </script>

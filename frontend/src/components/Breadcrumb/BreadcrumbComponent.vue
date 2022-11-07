@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <p class="breadcrumb">{{ link }}</p>
+    <div class="row m-1">
+        <div class="col-md-12">
+            <p class="breadcrumb">{{ link }}</p>
+        </div>
     </div>
 </template>
 
