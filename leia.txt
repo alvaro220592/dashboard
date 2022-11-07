@@ -99,3 +99,9 @@ Para usar variavel global no sass:
         }
 
 Dica: componentes que podem ser usados em qualquer página, tipo breadcrumbs, cards, podem ser criados na pasta 'components'
+
+Consumindo api jsonplaceholder:
+	https://jsonplaceholder.typicode.com/users
+
+	foi criado em 'Pages' o componente ListsComponent para fazer essa aula
+	instalar axios: npm install axios
