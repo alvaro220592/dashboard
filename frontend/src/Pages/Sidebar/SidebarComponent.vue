@@ -10,15 +10,20 @@
 
         <ul class="sidebar_links">
             <li>
-                <!-- <a href="/#/login" class="nav-link"> -->
                 <router-link :to="{name: 'home'}" class="nav-link">
                     <i class="bi bi-house"></i>
                     <span>Início</span>
                 </router-link>
-            </li>            
+            </li>
+            
+            <li>
+                <router-link :to="{name: 'clients'}" class="nav-link">
+                    <i class="bi bi-people"></i>
+                    <span>Clientes</span>
+                </router-link>
+            </li>
 
             <li>
-                <!-- <a href="/#/login" class="nav-link"> -->
                 <router-link :to="{name: 'products'}" class="nav-link">
                     <i class="bi bi-cart3"></i>
                     <span>Produtos</span>

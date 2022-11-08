@@ -1,7 +1,7 @@
 <template>
     <DashboardComponent>
         <div slot="pages" class="">
-            <BreadcrumbComponent link="Produtos / Teste" />
+            <BreadcrumbComponent link="Clientes / Teste" />
             
             <div class="row m-1">
                 <CardComponent titulo="Título 1" conteudo="Conteúdo 1">
@@ -18,7 +18,7 @@
             </div>
 
             <div class="row m-1">
-                <ListComponent :data="dados" description="Produtos" />
+                <ListComponent :data="dados" description="Clients" />
             </div>
         </div>
     </DashboardComponent>
@@ -31,7 +31,7 @@
     import ListComponent from '../List/ListComponent.vue'
     
     export default {
-        name: 'ProductComponent',
+        name: 'ClientComponent',
 
         components: {
             DashboardComponent,
@@ -52,7 +52,8 @@
 
         methods: {
             async getUsersData() {
-                const response = await fetch(`http://localhost:8000/api/products`);
+                // const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+                const response = await fetch(`http://localhost:8000/api/clients`);
 
                 const data = await response.json();
 

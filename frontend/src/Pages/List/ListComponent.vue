@@ -1,13 +1,24 @@
 <template>
-    <div class="col-md-12">
-        <ul v-for="user in users" :key="user.id">
-            <div class="card">
-                <li>id: {{ user.id }}</li>
-                <li>Nome: {{ user.name }}</li>
-                <li>Usuário: {{ user.username }}</li>
-                <li>Email: {{ user.email }}</li>
-            </div>
-        </ul>
+    <div class="col-md-12 mt-3">
+        <strong>{{ description }} <span class="data_length">{{ data.length }}</span></strong>
+        <div class="table-responsive">
+            <table class="table table-sm table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="client in data" :key="client.id">
+                        <td>{{ client.id }}</td>
+                        <td>{{ client.name }}</td>
+                        <td>{{ client.email }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </template>
 
@@ -18,7 +29,9 @@ export default {
     name: 'ListComponent',
 
     props: {
-        users: Array
+        data: Array,
+        description: String,
+        columns: Array
     }
 }
 </script>
